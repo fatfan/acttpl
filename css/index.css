@@ -1,0 +1,65 @@
+/*hack*/
+html{width:100%}
+body{line-height:1.5;color:#333;width:100%;font-size:14px}
+body,input{font-family:'Microsoft Yahei',verdana}
+aside,body,dd,div,dl,dt,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,img,li,nav,p,section,ul{margin:0;padding:0;border:none}
+aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+img,input,label{vertical-align:middle}
+img,input{margin:0;line-height:normal}
+button,input{outline:0}
+dl,ul{list-style:none}
+em{font-style:normal}
+a{text-decoration:none;color:#fff}
+
+/*global*/
+.g-wp{width: 100%; height: 100%; min-width: 960px;}
+.g-hd{height: 75px; background-color: #1d1d1d;}
+.g-bd{}
+.g-ft{padding: 30px 0; }
+
+/*module*/
+.m-hd, .m-cnt, .m-ft{width: 940px; margin: 0 auto; padding: 0 10px;}
+.m-hd{height: 75px;}
+.m-nav{}
+.m-navLink{float: right; }
+.m-navLink span{margin: 0 10px; color: #666; line-height:75px;}
+.m-banner{position: relative; height: 480px; background: url("../image/buddha.jpg") no-repeat 50% 50%;}
+.m-slideBox {position: relative; top: 39px; border: 1px solid #333; width: 877px; height: 400px; margin: 0 auto; box-shadow: 0 1px 1px #333;}
+.m-section{height: 300px; background-position: 50% 0; background-size: cover; background-image: url("../image/buddha.jpg");}
+.m-form{background-color: rgba(90,90,90,0.2); overflow: hidden; padding: 40px 150px;}
+.m-formItem{float: left; margin: 10px; width: 300px;}
+.m-ft{text-align: center;}
+.m-ft a{color: #666; margin: 10px;}
+
+
+ul.slideImg a {
+    /*background-image: url("../image/slide1.png");*/
+    width: 877px;
+    height: 400px;
+    display: block;
+}
+ul.slideImg li.off{ display: block;}
+ul.slideImg li.off{ display: none;}
+
+.slideBar {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    height: 12px;
+    width: 100px;
+}
+.slideBar a{
+	float: left;
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-right: 8px;
+    border-radius: 5px;
+    background-color: #CCC;
+}
+.slideBar a.on{background-color: #C79E14;}
+
+
+/*unit*/
+.u-logo{float: left; display: block; height: 100%; width: 108px; text-indent: -9999px; background: url("../image/logo.png") no-repeat 0 50%;}
+
