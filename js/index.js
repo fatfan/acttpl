@@ -24,9 +24,12 @@
 
 		});
 		$(".signup").click(function(){
-			alert(1);
+			//alert(1);
+			debugger
 			url="/activity/buddaexpress/sign.m"
 			data=$(".m-form").serialize();
+			//alert(data)
+			/*
 			$.post(url,data,function(response,status){
 				if(status==200){
 					switch(response.code){
@@ -47,7 +50,33 @@
 				else{
 					alert("500");
 				}
-			});
+			});*/
+			function callback(response, status){
+				if(status==200){
+					switch(response.code){
+						case 200:
+							$(".mask").fadeIn(100, function(){
+								$(".m-dlg").show(300);
+							});
+
+							break;
+						case 401:
+							alert("not login");
+							break;
+						case 203:
+							alert("expire");
+							break;
+						default:
+							break;
+					}
+				}
+			}
+			var rslt = {code:200};
+			callback(rslt,200);
+		});
+		$(".u-btn-s").click(function(){
+			$(".m-dlg").hide(500);
+			$(".mask").fadeOut(300);
 		});
 	});
 
