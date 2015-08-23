@@ -3,16 +3,31 @@
 	$(document).ready(function(){
 		var config={
 						"startDate":Date.parse("2015-08-22 00:00:00"),
-						"endDate":Date.parse("2015-08-23 17:00:00")
+						"endDate":Date.parse("2015-08-24 17:00:00")
 					};
-		function init(){
+		(function init(){
 			now=Date.now();
 			if(now>config.endDate){
 				$(".mask").show();
 				$(".m-expire").show();
+			}			
+
+			function slideImage(){
+				var cur = $("ul.slideImg li.on");
+				index=cur.index();
+				var len=$(".slideBar > a").length;
+				next= (index+1)%len;
+				//var len=$(".slideBar > a").length;
+				//var cur = $("");
+				cur.fadeOut(500, function(){
+					cur.attr("class", "off");
+					$(".slideImg li").eq(next).fadeIn(200).attr("class", "on");
+				});
+				$(".slideBar a.on").attr("class","off");
+				$(".slideBar a").eq(next).attr("class","on");
 			}
-		}
-		init();
+			setInterval(slideImage,4000); 
+		})();
 		$(".slideBar a").click(function(){
 			//alert($(this).index());
 			//debugger
@@ -27,9 +42,9 @@
 			$(this).attr("class","on");*/
 			index = $(this).index();
 			var old = $("ul.slideImg li.on");
-			old.fadeOut(1000, function(){
+			old.fadeOut(500, function(){
 				$(this).attr("class", "off");
-				$(".slideImg li").eq(index).fadeIn(500).attr("class", "on");
+				$(".slideImg li").eq(index).fadeIn(200).attr("class", "on");
 			});
 			$(".slideBar a.on").attr("class","off");
 			$(this).attr("class","on");

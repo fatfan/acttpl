@@ -67,10 +67,10 @@ ul.slideImg li.off{ display: none;}
 
 /*unit*/
 .u-logo{float: left; display: block; height: 100%; width: 108px; text-indent: -9999px; background: url("../image/logo.png") no-repeat 0 50%;}
-a.u-btn {clear: both; display: block; background-color: #ce3; height: 36px; width: 200px; text-align: center; padding: 2px 5px; border-radius: 2px; color: #fff;}
+a.u-btn {clear: both; display: block; background-color: #39e; height: 36px; width: 200px; text-align: center; padding: 2px 5px; border-radius: 2px; color: #fff;}
 
 /*combine*/
 .m-form a.u-btn{ bottom: -60px; position: relative; margin: 0 auto;}
-.m-dlg p{font-size: 22px; text-align: center; background-color: #abd; margin: -10px -10px 10px -10px; border-bottom: 1px solid #aaa; border-radius: 2px 2px 0 0; line-height: 36px;}
+.m-dlg p{font-size: 22px; text-align: center; background-color: #abd; margin: -10px -10px 10px -10px; border-bottom: 1px solid #aaa; border-radius: 5px 5px 0 0; line-height: 36px;}
 .m-dlg div.msg{font-size: 16px; padding: 20px;}
 .m-dlg a.u-btn-s{color: #000; display: inline-block; margin: 0 0 0 -52px; background-color: #ced; padding: 2px; position: relative; left: 50%; width: 100px; text-align: center; font-size: 16px; border-radius: 2px;}
