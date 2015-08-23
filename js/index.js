@@ -1,6 +1,18 @@
-(function init(){
+//(function init(){
 	//alert(1);
 	$(document).ready(function(){
+		var config={
+						"startDate":Date.parse("2015-08-22 00:00:00"),
+						"endDate":Date.parse("2015-08-23 17:00:00")
+					};
+		function init(){
+			now=Date.now();
+			if(now>config.endDate){
+				$(".mask").show();
+				$(".m-expire").show();
+			}
+		}
+		init();
 		$(".slideBar a").click(function(){
 			//alert($(this).index());
 			//debugger
@@ -25,7 +37,7 @@
 		});
 		$(".signup").click(function(){
 			//alert(1);
-			debugger
+			//debugger
 			url="/activity/buddaexpress/sign.m"
 			data=$(".m-form").serialize();
 			//alert(data)
@@ -56,7 +68,7 @@
 					switch(response.code){
 						case 200:
 							$(".mask").fadeIn(100, function(){
-								$(".m-dlg").show(300);
+								$(".m-dlg.m-signup").show(300);
 							});
 
 							break;
@@ -80,4 +92,4 @@
 		});
 	});
 
-})();
+//})();
