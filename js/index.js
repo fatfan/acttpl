@@ -53,7 +53,7 @@
 		$(".signup").click(function(){
 			//alert(1);
 			//debugger
-			url="/activity/buddaexpress/sign.m"
+			url="/activity/buddaexpress/sign.m";
 			data=$(".m-form").serialize();
 			//alert(data)
 			/*

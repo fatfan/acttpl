@@ -85,7 +85,7 @@ module.exports = function(grunt) {
           dest: "dist/css"
         }]*/
         files: {
-          "dist/css/style.css":["css/*.css"]
+          "dist/css/index.css":["css/*.css"]
         }
       }
     },
